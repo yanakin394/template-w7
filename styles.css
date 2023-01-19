@@ -1,0 +1,105 @@
+body {
+    background-color: rgb(233, 229, 229);
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 700px;
+    grid-template-areas: "header header header"
+        "main main sidebar"
+        "main main sidebar"
+        "footer footer footer";
+    grid-template-columns: 300px 500px 300px;
+    grid-template-rows: 70px 1fr 1fr 120px;
+    gap: 1rem;
+}
+
+.main {
+    grid-area: main;
+}
+
+.header {
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+}
+
+.aside {
+    background-color: rgb(62, 185, 113);
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    grid-area: sidebar;
+}
+
+.main {
+    background-color: antiquewhite;
+    font-size: larger;
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+}
+
+.maingrid {
+    margin: 20px;
+    border: 1px solid red;
+    background-color: orange;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 70px 70px;
+    grid-template-areas: "add1 add2"
+        "add3 add3";
+    gap: 1em;
+    justify-content: center;
+    align-content: flex-end;
+}
+
+.add1 {
+    grid-area: add1;
+    display: flex;
+    justify-content: center;
+
+}
+
+.add2 {
+    grid-area: add2;
+    display: flex;
+    justify-content: center;
+}
+
+.add3 {
+
+    grid-area: add3;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.gridbasement {
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1em;
+    margin-left: 30px;
+}
+
+.basement {
+    font-size: larger;
+    background-color: white;
+    width: 220px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
