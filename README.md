@@ -1,2 +1,2 @@
 # template-w7
-adaptive css
+responsive css
