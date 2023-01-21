@@ -10,9 +10,9 @@ body {
         "main main sidebar"
         "main main sidebar"
         "footer footer footer";
-    grid-template-columns: 300px 500px 300px;
-    grid-template-rows: 70px 1fr 1fr 120px;
-    gap: 1rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 2em;
 }
 
 .main {
@@ -41,6 +41,7 @@ body {
     background-color: antiquewhite;
     font-size: larger;
     font-weight: bold;
+    display: grid;
 }
 
 p {
@@ -48,37 +49,40 @@ p {
 }
 
 .maingrid {
-    margin: 20px;
-    border: 1px solid red;
-    background-color: orange;
+    margin-left: 10%;
+    width: 80%;
     display: grid;
-    grid-template-columns: 250px 250px;
-    grid-template-rows: 70px 70px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: "add1 add2"
         "add3 add3";
     gap: 1em;
-    justify-content: center;
     align-content: flex-end;
 }
 
 .add1 {
+    background-color: orange;
     grid-area: add1;
     display: flex;
     justify-content: center;
-
+    align-items: center;
 }
 
 .add2 {
+    background-color: orange;
     grid-area: add2;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .add3 {
-
+    background-color: orange;
     grid-area: add3;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 4%;
 }
 
 .footer {
@@ -91,13 +95,13 @@ p {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 1em;
-    margin-left: 30px;
 }
 
 .basement {
+    margin-left: 10%;
     font-size: larger;
     background-color: white;
-    width: 220px;
+    width: 80%;
     height: 80px;
     display: flex;
     justify-content: center;
