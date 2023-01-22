@@ -1,22 +1,15 @@
-body {
-    background-color: rgb(233, 229, 229);
-}
-
 .container {
+    background-color: rgb(233, 229, 229);
+    margin-left: 5%;
     display: grid;
-    width: 100%;
-    height: 700px;
+    width: 90%;
     grid-template-areas: "header header header"
-        "main main sidebar"
-        "main main sidebar"
+        "main main main"
+        "main main main"
         "footer footer footer";
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr 4fr 1fr;
     gap: 2em;
-}
-
-.main {
-    grid-area: main;
 }
 
 .header {
@@ -28,65 +21,59 @@ body {
     grid-area: header;
 }
 
+.main {
+    background-color: antiquewhite;
+    grid-area: main;
+    font-size: larger;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "p p aside"
+        "maingrid maingrid aside"
+        "maingrid maingrid aside";
+    gap: 2em;
+}
+
 .aside {
+    padding-left: 35%;
     background-color: rgb(62, 185, 113);
     font-size: larger;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-    grid-area: sidebar;
+    grid-area: aside;
 }
 
-.main {
-    background-color: antiquewhite;
-    font-size: larger;
-    font-weight: bold;
-    display: grid;
-}
-
-p {
+.p {
     text-align: center;
+    grid-area: p;
 }
 
 .maingrid {
-    margin-left: 10%;
+    grid-area: maingrid;
     width: 80%;
+    height: 40%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "add1 add2"
-        "add3 add3";
+    grid-template-areas: "add add"
+        "large large";
     gap: 1em;
-    align-content: flex-end;
+    margin-top: 25%;
+    margin-left: 10%;
 }
 
-.add1 {
+.add {
     background-color: orange;
-    grid-area: add1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-left: 45%;
 }
 
-.add2 {
-    background-color: orange;
-    grid-area: add2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.add3 {
-    background-color: orange;
-    grid-area: add3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0.5%;
+.large {
+    grid-area: large;
 }
 
 .footer {
     grid-area: footer;
+    margin-bottom: 2%;
 }
 
 .gridbasement {
